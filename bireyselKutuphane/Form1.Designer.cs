@@ -47,7 +47,6 @@ namespace bireyselKutuphane
             this.label13 = new System.Windows.Forms.Label();
             this.parola2Txt = new System.Windows.Forms.TextBox();
             this.uyeOlBtn = new System.Windows.Forms.Button();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -233,7 +232,6 @@ namespace bireyselKutuphane
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.parola2Txt);
             this.groupBox2.Controls.Add(this.uyeOlBtn);
-            this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.radioButton5);
             this.groupBox2.Controls.Add(this.radioButton6);
@@ -292,20 +290,6 @@ namespace bireyselKutuphane
             this.uyeOlBtn.UseVisualStyleBackColor = false;
             this.uyeOlBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton4.Location = new System.Drawing.Point(334, 245);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(96, 24);
-            this.radioButton4.TabIndex = 23;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Personel";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -322,7 +306,7 @@ namespace bireyselKutuphane
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton5.Location = new System.Drawing.Point(334, 204);
+            this.radioButton5.Location = new System.Drawing.Point(334, 216);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(104, 24);
             this.radioButton5.TabIndex = 21;
@@ -533,7 +517,6 @@ namespace bireyselKutuphane
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Button uyeOlBtn;
-        private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;

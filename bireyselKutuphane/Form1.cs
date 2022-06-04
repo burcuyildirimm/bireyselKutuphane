@@ -143,25 +143,7 @@ namespace bireyselKutuphane
                 }
 
             }
-            else if (radioButton4.Checked)
-            {
-                using (var baglan = new MySqlConnection(con))
-                {
-                    using (var komut = new MySqlCommand($"INSERT INTO personel(personel_id,kart_id,mail,tel_no,personel_ad,personel_soyad,adres,parola)VALUES('{idTxt.Text}','{kartIdTxt.Text}','{mailTxt.Text}','{telTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{adresTxt.Text}','{parola2Txt.Text}')", baglan))
-                    {
-                        try
-                        {
-                            komut.Connection.Open();
-                            komut.ExecuteNonQuery();
-                            MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
-                        }
-                        catch (Exception hata)
-                        {
-                            MessageBox.Show(hata.Message);
-                        }
-                    }
-                }
-            }
+            
             else
             {
                 MessageBox.Show("Lütfen kullanıcı tipini seçiniz.");
@@ -182,11 +164,7 @@ namespace bireyselKutuphane
             bolumIdTxt.Visible = false;
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            label11.Visible = false;
-            bolumIdTxt.Visible =false;
-        }
+   
 
         private void kullaniciKartIdTxt_TextChanged(object sender, EventArgs e)
         {

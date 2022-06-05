@@ -22,6 +22,25 @@ namespace bireyselKutuphane
         {
             InitializeComponent();
         }
+        bool durum;
+        void VarMi()
+
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection();
+            MySqlConnection baglan = mySqlConnection;
+            baglan.ConnectionString = "Server = 172.21.54.3; uid = BurcuNYP; pwd =Burcu12345.; database = BurcuNYP";
+            MySqlCommand mySqlCommand = new MySqlCommand($"select*from ogrenci where ogrenci_id values'{idTxt.Text}'",baglan);
+            MySqlDataReader dr = mySqlCommand.ExecuteReader();
+            if (dr.Read())
+            {
+                durum = false;
+            }
+            else
+            {
+                durum = true;
+            }
+            baglan.Close();
+        }
        
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -104,42 +123,56 @@ namespace bireyselKutuphane
         private void button1_Click(object sender, EventArgs e)
         {
             string con = "Server = 172.21.54.3; uid = BurcuNYP; pwd =Burcu12345.; database = BurcuNYP";
+
             if (radioButton6.Checked)
             {
                 using (var baglan = new MySqlConnection(con))
                 {
                     using (var komut = new MySqlCommand($"INSERT INTO ogrenci(ogrenci_id,bolum_id,ogrenci_ad,ogrenci_soyad,kart_id,mail,adres,tel_no,parola)VALUES('{idTxt.Text}','{bolumIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{kartIdTxt.Text}','{mailTxt.Text}','{adresTxt.Text}','{telTxt.Text}','{parola2Txt.Text}')", baglan))
-                    {
-                        try
+                    {if (durum==false)
                         {
-                            komut.Connection.Open();
-                            komut.ExecuteNonQuery();
-                            MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
+                            try
+                            {
+                                komut.Connection.Open();
+                                komut.ExecuteNonQuery();
+                                MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
+                            }
+                            catch (Exception hata)
+                            {
+                                MessageBox.Show(hata.Message);
+                            }
                         }
-                        catch (Exception hata)
+                        else
                         {
-                            MessageBox.Show(hata.Message);
+                            MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
                         }
                     }
                 }
             }
             else if (radioButton5.Checked)
             {
+                if(durum == false) { 
                 using (var baglan = new MySqlConnection(con))
                 {
-                    using (var komut = new MySqlCommand($"INSERT INTO ogretmen(ogretmen_id,kart_id,ogretmen_ad,ogretmen_soyad,tel_no,adres,mail,parola)VALUES('{idTxt.Text}','{kartIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{telTxt.Text}','{adresTxt.Text}','{mailTxt.Text}','{parola2Txt.Text}')", baglan))
-                    {
-                        try
+                        using (var komut = new MySqlCommand($"INSERT INTO ogretmen(ogretmen_id,kart_id,ogretmen_ad,ogretmen_soyad,tel_no,adres,mail,parola)VALUES('{idTxt.Text}','{kartIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{telTxt.Text}','{adresTxt.Text}','{mailTxt.Text}','{parola2Txt.Text}')", baglan))
                         {
-                            komut.Connection.Open();
-                            komut.ExecuteNonQuery();
-                            MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
+                            try
+                            {
+                                komut.Connection.Open();
+                                komut.ExecuteNonQuery();
+                                MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
+                            }
+                            catch (Exception hata)
+                            {
+                                MessageBox.Show(hata.Message);
+                            }
                         }
-                        catch (Exception hata)
-                        {
-                            MessageBox.Show(hata.Message);
-                        }
+
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
                 }
 
             }

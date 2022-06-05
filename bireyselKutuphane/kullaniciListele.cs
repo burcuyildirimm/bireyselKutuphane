@@ -26,12 +26,13 @@ namespace bireyselKutuphane
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
         }
-        private void uyeOlBtn_Click(object sender, EventArgs e)
+        private void uyeOlBtn_Click(object sender, EventArgs e)//update
         {
             baglanti.Open();
-            MySqlCommand mySqlCommand = new MySqlCommand("update ogrenci set ogrenci_id='" + idTxt.Text + "',ogrenci_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',ogrenci_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "',bolum_id='" + bolumIdTxt.Text + "'where ogrenci_id='" + gnclleIdTxt.Text + "'", baglanti);
+            MySqlCommand mySqlCommand = new MySqlCommand("update ogrenci set ogrenci_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',ogrenci_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "',bolum_id='" + bolumIdTxt.Text + "'where ogrenci_id='" + idTxt.Text + "'", baglanti);
+
             mySqlCommand.ExecuteNonQuery();
-            verileriGoster("select*from ogrenci");
+            verileriGoster("select*from ogrenci join bolum on ogrenci.bolum_id=bolum.bolum_id");
             baglanti.Close();
         }
 
@@ -42,17 +43,20 @@ namespace bireyselKutuphane
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-
+            label11.Visible = true;
+            bolumIdTxt.Visible = true;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            label11.Visible = false;
+            bolumIdTxt.Visible = false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            label11.Visible = false;
+            bolumIdTxt.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -108,7 +112,7 @@ namespace bireyselKutuphane
         {
             if (radioButton3.Checked)
             {
-                verileriGoster("select*from ogrenci");
+                verileriGoster("select*from ogrenci join bolum on ogrenci.bolum_id=bolum.bolum_id");
             }
             else if (radioButton2.Checked)
             {
@@ -129,7 +133,7 @@ namespace bireyselKutuphane
             {
                 baglanti.Open();
                 MySqlCommand komut = new MySqlCommand("delete from ogrenci where ogrenci_id=@ogrenci_id", baglanti);
-                komut.Parameters.AddWithValue("@ogrenci_id", gnclleIdTxt.Text);
+                komut.Parameters.AddWithValue("@ogrenci_id", idTxt.Text);
                 komut.ExecuteNonQuery();
                 verileriGoster("select*from ogrenci");
                 baglanti.Close();
@@ -142,7 +146,7 @@ namespace bireyselKutuphane
                 {
                     baglanti.Open();
                     MySqlCommand komut = new MySqlCommand("delete from ogretmen where ogretmen_id=@ogretmen_id", baglanti);
-                    komut.Parameters.AddWithValue("@ogretmen_id", gnclleIdTxt.Text);
+                    komut.Parameters.AddWithValue("@ogretmen_id",idTxt.Text);
                     komut.ExecuteNonQuery();
                     verileriGoster("select*from ogretmen");
                     baglanti.Close();
@@ -157,7 +161,7 @@ namespace bireyselKutuphane
                 {
                     baglanti.Open();
                     MySqlCommand komut = new MySqlCommand("delete from personel where personel_id=@personel_id", baglanti);
-                    komut.Parameters.AddWithValue("@personel_id", gnclleIdTxt.Text);
+                    komut.Parameters.AddWithValue("@personel_id", idTxt.Text);
                     komut.ExecuteNonQuery();
                     verileriGoster("select*from personel");
                     baglanti.Close();
@@ -171,7 +175,7 @@ namespace bireyselKutuphane
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (radioButton6.Checked)
+            if (radioButton3.Checked)
             {
                 int seciliAlan = dataGridView1.SelectedCells[0].RowIndex;
                 string id = dataGridView1.Rows[seciliAlan].Cells[0].Value.ToString();
@@ -194,7 +198,7 @@ namespace bireyselKutuphane
                 telTxt.Text = telefon;
                 bolumIdTxt.Text = bolumId;
             }
-            else if (radioButton5.Checked)
+            else if (radioButton2.Checked)
             {
                 int seciliAlan = dataGridView1.SelectedCells[0].RowIndex;
                 string id = dataGridView1.Rows[seciliAlan].Cells[0].Value.ToString();
@@ -215,7 +219,7 @@ namespace bireyselKutuphane
                 kartIdTxt.Text = kartId;
                 telTxt.Text = telefon;    
             }
-            else if (radioButton4.Checked)
+            else if (radioButton1.Checked)
             {
                 int seciliAlan = dataGridView1.SelectedCells[0].RowIndex;
                 string id = dataGridView1.Rows[seciliAlan].Cells[0].Value.ToString();
@@ -240,6 +244,30 @@ namespace bireyselKutuphane
             {
                 MessageBox.Show("Seçtiğiniz kullanıcı tiplerinin eş değer olduğundan emin olun ");
             }
+        }
+
+        private void kullaniciListele_Load(object sender, EventArgs e)
+        {
+            label11.Visible = false;
+            bolumIdTxt.Visible = false;
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            label11.Visible = true;
+            bolumIdTxt.Visible = true;
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            label11.Visible = false;
+            bolumIdTxt.Visible = false;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            label11.Visible = false;
+            bolumIdTxt.Visible = false;
         }
     }
 }

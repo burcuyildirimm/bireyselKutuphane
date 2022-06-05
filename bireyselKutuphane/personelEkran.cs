@@ -44,36 +44,20 @@ namespace bireyselKutuphane
 
         private void kitapIslemleriCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (kitapIslemleriCmb.SelectedIndex==0)
-            {
-                kitapListele kitapListele = new kitapListele();
-                kitapListele.Show();
-                this.Hide();
-            }
-            else if (kitapIslemleriCmb.SelectedIndex == 1)
-            {
-                kitapEkle kitapEkle = new kitapEkle();
-                kitapEkle.Show();
-                this.Hide();
-            }
-            else if (kitapIslemleriCmb.SelectedIndex == 2)
-            {
-                kitapSil kitapSil = new kitapSil();
-                kitapSil.Show();
-                this.Hide();
-            }
-            else if (kitapIslemleriCmb.SelectedIndex == 3)
-            {
-                kitapAra kitapAra = new kitapAra();
-                kitapAra.Show();
-                this.Hide();
-            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             kullaniciListele kullaniciListele = new kullaniciListele();
             kullaniciListele.Show();
+            this.Hide();
+        }
+
+        private void kitapBtn_Click(object sender, EventArgs e)
+        {
+            kitapListele kitapListele = new kitapListele();
+            kitapListele.Show();
             this.Hide();
         }
     }

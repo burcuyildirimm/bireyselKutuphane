@@ -65,9 +65,6 @@ namespace bireyselKutuphane
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.listeleBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.gnclleIdTxt = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -100,9 +97,6 @@ namespace bireyselKutuphane
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PapayaWhip;
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.gnclleIdTxt);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.silBtn);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.parola2Txt);
@@ -132,7 +126,7 @@ namespace bireyselKutuphane
             this.groupBox2.Size = new System.Drawing.Size(730, 455);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Üye Ekleme";
+            this.groupBox2.Text = "Üye Bilgileri";
             // 
             // silBtn
             // 
@@ -141,7 +135,7 @@ namespace bireyselKutuphane
             this.silBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.silBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.silBtn.ForeColor = System.Drawing.Color.Black;
-            this.silBtn.Location = new System.Drawing.Point(556, 190);
+            this.silBtn.Location = new System.Drawing.Point(543, 258);
             this.silBtn.Name = "silBtn";
             this.silBtn.Size = new System.Drawing.Size(127, 49);
             this.silBtn.TabIndex = 27;
@@ -174,7 +168,7 @@ namespace bireyselKutuphane
             this.guncelleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guncelleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.guncelleBtn.ForeColor = System.Drawing.Color.Black;
-            this.guncelleBtn.Location = new System.Drawing.Point(317, 190);
+            this.guncelleBtn.Location = new System.Drawing.Point(367, 256);
             this.guncelleBtn.Name = "guncelleBtn";
             this.guncelleBtn.Size = new System.Drawing.Size(127, 49);
             this.guncelleBtn.TabIndex = 24;
@@ -193,6 +187,7 @@ namespace bireyselKutuphane
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Personel";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // label12
             // 
@@ -217,6 +212,7 @@ namespace bireyselKutuphane
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Öğretmen";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -230,6 +226,7 @@ namespace bireyselKutuphane
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Öğrenci";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // label11
             // 
@@ -454,6 +451,8 @@ namespace bireyselKutuphane
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -470,42 +469,12 @@ namespace bireyselKutuphane
             this.listeleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.listeleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listeleBtn.ForeColor = System.Drawing.Color.Black;
-            this.listeleBtn.Location = new System.Drawing.Point(1588, 115);
+            this.listeleBtn.Location = new System.Drawing.Point(1606, 115);
             this.listeleBtn.Name = "listeleBtn";
             this.listeleBtn.Size = new System.Drawing.Size(127, 52);
             this.listeleBtn.TabIndex = 30;
             this.listeleBtn.UseVisualStyleBackColor = false;
             this.listeleBtn.Click += new System.EventHandler(this.listeleBtn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(289, 287);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(422, 18);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Güncellenmesini veya silinmesini istediğiniz kişinin id\'sini giriniz.";
-            // 
-            // gnclleIdTxt
-            // 
-            this.gnclleIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gnclleIdTxt.Location = new System.Drawing.Point(451, 334);
-            this.gnclleIdTxt.Name = "gnclleIdTxt";
-            this.gnclleIdTxt.Size = new System.Drawing.Size(157, 27);
-            this.gnclleIdTxt.TabIndex = 29;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(386, 334);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 25);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Id:";
             // 
             // kullaniciListele
             // 
@@ -523,10 +492,10 @@ namespace bireyselKutuphane
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "kullaniciListele";
             this.Text = "kullaniciListele";
+            this.Load += new System.EventHandler(this.kullaniciListele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -573,8 +542,5 @@ namespace bireyselKutuphane
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button listeleBtn;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox gnclleIdTxt;
-        private System.Windows.Forms.Label label3;
     }
 }

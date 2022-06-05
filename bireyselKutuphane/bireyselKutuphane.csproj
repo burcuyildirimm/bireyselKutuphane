@@ -55,29 +55,11 @@
     </Compile>
     <Compile Include="girismetot.cs" />
     <Compile Include="KayitOl.cs" />
-    <Compile Include="kitapAra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kitapAra.Designer.cs">
-      <DependentUpon>kitapAra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kitapEkle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kitapEkle.Designer.cs">
-      <DependentUpon>kitapEkle.cs</DependentUpon>
-    </Compile>
     <Compile Include="kitapListele.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="kitapListele.Designer.cs">
       <DependentUpon>kitapListele.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kitapSil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kitapSil.Designer.cs">
-      <DependentUpon>kitapSil.cs</DependentUpon>
     </Compile>
     <Compile Include="kullaniciEkran.cs">
       <SubType>Form</SubType>
@@ -101,9 +83,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kitapEkle.resx">
-      <DependentUpon>kitapEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kitapListele.resx">
       <DependentUpon>kitapListele.cs</DependentUpon>

@@ -33,7 +33,6 @@ namespace bireyselKutuphane
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -87,7 +86,6 @@ namespace bireyselKutuphane
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
@@ -115,17 +113,6 @@ namespace bireyselKutuphane
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Personel";
             this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.linkLabel1.Location = new System.Drawing.Point(189, 320);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(108, 17);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Şifremi Unuttum";
             // 
             // label3
             // 
@@ -169,7 +156,7 @@ namespace bireyselKutuphane
             this.girisBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.girisBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.girisBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.girisBtn.Location = new System.Drawing.Point(192, 372);
+            this.girisBtn.Location = new System.Drawing.Point(192, 325);
             this.girisBtn.Name = "girisBtn";
             this.girisBtn.Size = new System.Drawing.Size(127, 49);
             this.girisBtn.TabIndex = 6;
@@ -513,7 +500,6 @@ namespace bireyselKutuphane
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Button uyeOlBtn;

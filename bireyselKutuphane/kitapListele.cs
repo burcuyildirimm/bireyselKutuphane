@@ -35,7 +35,7 @@ namespace bireyselKutuphane
         private void ekleBtn_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            MySqlCommand mySqlCommand = new MySqlCommand($"insert into kitap(kitap_id,kitap_adi,baski,cilt,isbn,kitap_dili,kategori_id,yayinevi_id,cevirme_yili,sayfa_sayisi,raf_konumu,adet,yayin_yili,yazar_id,cevirmen_id) values ('{kitapIdTxt.Text}','{kitapAdTxt.Text}','{baskıTxt.Text}','{ciltTxt.Text}','{isbnTxt.Text}','{kitapDiliTxt.Text}','{kategoriIdTxt.Text}','{yayıneviIdTxt.Text}','{cevirmeYiliTxt.Text}','{sayfaSayTxt.Text}','{rafKonumTxt.Text}','{adetTxt.Text}','{yayınYiliTxt.Text}','{yazarIdTxt.Text}','{cevirmenIdTxt.Text}')",baglanti);
+            MySqlCommand mySqlCommand = new MySqlCommand($"insert into kitap(kitap_id,kitap_adi,baski,cilt,isbn,kitap_dili,kategori_ad,yayinevi_id,cevirme_yili,sayfa_sayisi,raf_konumu,adet,yayin_yili,yazar_id,cevirmen_id) values ('{kitapIdTxt.Text}','{kitapAdTxt.Text}','{baskıTxt.Text}','{ciltTxt.Text}','{isbnTxt.Text}','{kitapDiliTxt.Text}','{kategoriCmb.Text}','{yayıneviIdTxt.Text}','{cevirmeYiliTxt.Text}','{sayfaSayTxt.Text}','{rafKonumTxt.Text}','{adetTxt.Text}','{yayınYiliTxt.Text}','{yazarIdTxt.Text}','{cevirmenIdTxt.Text}')",baglanti);
             mySqlCommand.ExecuteNonQuery();
             verileriGoster("select*from kitap");
             baglanti.Close();
@@ -74,7 +74,7 @@ namespace bireyselKutuphane
         {
 
             baglanti.Open();
-            MySqlCommand mySqlCommand = new MySqlCommand("update kitap set kitap_adi='" + kitapAdTxt.Text + "',baski='" +baskıTxt.Text + "',cilt='" + ciltTxt.Text + "',isbn='" + isbnTxt.Text + "',kitap_dili='" + kitapDiliTxt.Text + "',kategori_id='" + kategoriIdTxt.Text + "',yayinevi_id='" +yayıneviIdTxt.Text +"',cevirme_yili='"+cevirmeYiliTxt.Text+"',sayfa_sayisi='"+sayfaSayTxt.Text+"',raf_konumu='"+rafKonumTxt.Text+"',adet='"+adetTxt.Text+"',yayin_yili='"+yayınYiliTxt.Text+"',yazar_id='"+yazarIdTxt.Text+"',cevirmen_id='"+cevirmenIdTxt.Text+ "'where kitap_id='" + kitapIdTxt.Text + "'", baglanti);
+            MySqlCommand mySqlCommand = new MySqlCommand("update kitap set kitap_adi='" + kitapAdTxt.Text + "',baski='" +baskıTxt.Text + "',cilt='" + ciltTxt.Text + "',isbn='" + isbnTxt.Text + "',kitap_dili='" + kitapDiliTxt.Text + "',kategori_ad='" + kategoriCmb.Text + "',yayinevi_id='" +yayıneviIdTxt.Text +"',cevirme_yili='"+cevirmeYiliTxt.Text+"',sayfa_sayisi='"+sayfaSayTxt.Text+"',raf_konumu='"+rafKonumTxt.Text+"',adet='"+adetTxt.Text+"',yayin_yili='"+yayınYiliTxt.Text+"',yazar_id='"+yazarIdTxt.Text+"',cevirmen_id='"+cevirmenIdTxt.Text+ "'where kitap_id='" + kitapIdTxt.Text + "'", baglanti);
 
             mySqlCommand.ExecuteNonQuery();
             verileriGoster("select*from kitap join yazar on kitap.yazar_id=yazar.yazar_id");
@@ -90,7 +90,7 @@ namespace bireyselKutuphane
             string cilt = dataGridView1.Rows[seciliAlan].Cells[3].Value.ToString();
             string isbn = dataGridView1.Rows[seciliAlan].Cells[4].Value.ToString();
             string kitapdili = dataGridView1.Rows[seciliAlan].Cells[5].Value.ToString();
-            string kategoriid = dataGridView1.Rows[seciliAlan].Cells[6].Value.ToString();
+            string kategoriad = dataGridView1.Rows[seciliAlan].Cells[6].Value.ToString();
             string yayineviid = dataGridView1.Rows[seciliAlan].Cells[7].Value.ToString();
             string cevirmeyili = dataGridView1.Rows[seciliAlan].Cells[8].Value.ToString();
             string sayfasayisi = dataGridView1.Rows[seciliAlan].Cells[9].Value.ToString();
@@ -106,7 +106,7 @@ namespace bireyselKutuphane
             ciltTxt.Text = cilt;
             isbnTxt.Text = isbn;
             kitapDiliTxt.Text = kitapdili;
-            kategoriIdTxt.Text = kategoriid;
+            kategoriCmb.Text = kategoriad;
             yayıneviIdTxt.Text = yayineviid;
             cevirmeYiliTxt.Text = cevirmeyili;
             sayfaSayTxt.Text = sayfasayisi;

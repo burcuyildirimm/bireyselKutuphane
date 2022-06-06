@@ -41,7 +41,26 @@ namespace bireyselKutuphane
             }
             baglan.Close();
         }
+        bool durum2;
+        void VarMi2()
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection();
+            MySqlConnection baglan = mySqlConnection;
+            baglan.ConnectionString = "Server = 172.21.54.3; uid = BurcuNYP; pwd =Burcu12345.; database = BurcuNYP";
+            MySqlCommand mySqlCommand = new MySqlCommand($"select*from ogretmen where ogretmen_id values'{idTxt.Text}'", baglan);
+            MySqlDataReader dr = mySqlCommand.ExecuteReader();
+            if (dr.Read())
+            {
+                durum2 = false;
+            }
+            else
+            {
+                durum2 = true;
+            }
+            baglan.Close();
+        }
        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             label11.Visible = false;
@@ -63,7 +82,7 @@ namespace bireyselKutuphane
             baglan.Open();
             if (radioButton1.Checked)
             {  
-                if (girismetot.kullaniciKontrolOgrenci(Convert.ToInt32(kullaniciKartIdTxt.Text),(parolaTxt.Text).ToString())==1)
+                if (girismetot.kullaniciKontrolOgrenci(Convert.ToInt32(kullaniciIdTxt.Text),(parolaTxt.Text).ToString())==1)
                 {   
                     kullaniciEkran kullaniciEkran = new kullaniciEkran();
                     kullaniciEkran.Show();
@@ -76,7 +95,7 @@ namespace bireyselKutuphane
             }
             else if (radioButton2.Checked)
             {
-                if (girismetot.kullaniciKontrolOgretmen(Convert.ToInt32(kullaniciKartIdTxt.Text), parolaTxt.Text) == 1)
+                if (girismetot.kullaniciKontrolOgretmen(Convert.ToInt32(kullaniciIdTxt.Text), parolaTxt.Text) == 1)
                 {
                     kullaniciEkran kullaniciEkran = new kullaniciEkran();
                     kullaniciEkran.Show();
@@ -91,7 +110,7 @@ namespace bireyselKutuphane
             }
             else if (radioButton3.Checked)
             {
-                if (girismetot.kullaniciKontrolPersonel(Convert.ToInt32(kullaniciKartIdTxt.Text), (parolaTxt.Text)) == 1)
+                if (girismetot.kullaniciKontrolPersonel(Convert.ToInt32(kullaniciIdTxt.Text), (parolaTxt.Text)) == 1)
                 {
                     personelEkran personelEkran = new personelEkran();
                     personelEkran.Show();
@@ -151,7 +170,7 @@ namespace bireyselKutuphane
             }
             else if (radioButton5.Checked)
             {
-                if(durum == false) { 
+                if(durum2 == false) { 
                 using (var baglan = new MySqlConnection(con))
                 {
                         using (var komut = new MySqlCommand($"INSERT INTO ogretmen(ogretmen_id,kart_id,ogretmen_ad,ogretmen_soyad,tel_no,adres,mail,parola)VALUES('{idTxt.Text}','{kartIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{telTxt.Text}','{adresTxt.Text}','{mailTxt.Text}','{parola2Txt.Text}')", baglan))
@@ -180,6 +199,13 @@ namespace bireyselKutuphane
             else
             {
                 MessageBox.Show("Lütfen kullanıcı tipini seçiniz.");
+            }
+            foreach(Control item in Controls)
+            {
+                if(item is TextBox)
+                {
+                    item.Text = " ";
+                }
             }
            
 

@@ -29,7 +29,12 @@ namespace bireyselKutuphane
 
         private void emanetIslemleriCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (emanetIslemleriCmb.Text== "Emanet Kitap Alma")
+            {
+                emanetAlma emanetAlma = new emanetAlma();
+                emanetAlma.Show();
+                this.Hide();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)

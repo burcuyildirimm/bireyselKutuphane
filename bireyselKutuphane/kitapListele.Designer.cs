@@ -66,10 +66,10 @@ namespace bireyselKutuphane
             this.label6 = new System.Windows.Forms.Label();
             this.kitapAdTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.kategoriIdTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.kitapIdTxt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kategoriCmb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -136,6 +136,7 @@ namespace bireyselKutuphane
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PapayaWhip;
+            this.groupBox2.Controls.Add(this.kategoriCmb);
             this.groupBox2.Controls.Add(this.ekleBtn);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.adetTxt);
@@ -166,7 +167,6 @@ namespace bireyselKutuphane
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.kitapAdTxt);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.kategoriIdTxt);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.kitapIdTxt);
             this.groupBox2.Location = new System.Drawing.Point(12, 177);
@@ -460,16 +460,9 @@ namespace bireyselKutuphane
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(9, 367);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 20);
+            this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Kategori Id:";
-            // 
-            // kategoriIdTxt
-            // 
-            this.kategoriIdTxt.Location = new System.Drawing.Point(104, 367);
-            this.kategoriIdTxt.Name = "kategoriIdTxt";
-            this.kategoriIdTxt.Size = new System.Drawing.Size(157, 22);
-            this.kategoriIdTxt.TabIndex = 7;
+            this.label5.Text = "Kategori Adı:";
             // 
             // label4
             // 
@@ -500,6 +493,32 @@ namespace bireyselKutuphane
             this.dataGridView1.Size = new System.Drawing.Size(966, 427);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // kategoriCmb
+            // 
+            this.kategoriCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kategoriCmb.ForeColor = System.Drawing.Color.DimGray;
+            this.kategoriCmb.FormattingEnabled = true;
+            this.kategoriCmb.Items.AddRange(new object[] {
+            "Edebiyat",
+            "Felsefe",
+            "Çocuk Gelişim",
+            "Fantastik",
+            "Bilim Kurgu",
+            "Polisiye",
+            "Dini-Tasavvuf",
+            "Biyografi",
+            "Deneme",
+            "Eğitim",
+            "Tiyatro",
+            "Tarih",
+            "Çizgi Roman",
+            "Sanat-Tasarım",
+            "Yemek"});
+            this.kategoriCmb.Location = new System.Drawing.Point(140, 363);
+            this.kategoriCmb.Name = "kategoriCmb";
+            this.kategoriCmb.Size = new System.Drawing.Size(121, 28);
+            this.kategoriCmb.TabIndex = 40;
             // 
             // kitapListele
             // 
@@ -561,10 +580,10 @@ namespace bireyselKutuphane
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox kitapAdTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox kategoriIdTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox kitapIdTxt;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ekleBtn;
+        private System.Windows.Forms.ComboBox kategoriCmb;
     }
 }

@@ -19,7 +19,8 @@ namespace bireyselKutuphane
             InitializeComponent();
         }
         MySqlConnection baglanti =new MySqlConnection( "Server = 172.21.54.3; uid = BurcuNYP; pwd =Burcu12345.; database = BurcuNYP");
-        public void verileriGoster(string veriler)
+     
+            public void verileriGoster(string veriler)
         {
             MySqlDataAdapter da = new MySqlDataAdapter(veriler, baglanti);
             DataSet ds = new DataSet();
@@ -34,6 +35,7 @@ namespace bireyselKutuphane
             mySqlCommand.ExecuteNonQuery();
             verileriGoster("select*from ogrenci join bolum on ogrenci.bolum_id=bolum.bolum_id");
             baglanti.Close();
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -268,6 +270,28 @@ namespace bireyselKutuphane
         {
             label11.Visible = false;
             bolumIdTxt.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            personelEkran personelEkran = new personelEkran();
+            personelEkran.Show();
+            this.Hide();
+        }
+
+        private void idTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (idTxt.Text == "")
+            {
+                foreach (Control item in groupBox2.Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        item.Text = "";
+
+                    }
+                }
+            }
         }
     }
 }

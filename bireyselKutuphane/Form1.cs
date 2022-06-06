@@ -130,11 +130,11 @@ namespace bireyselKutuphane
         }
         void Temizle()
         {
-            foreach (Control item in Controls)
+            foreach (Control item in groupBox2.Controls)
             {
                 if(item is TextBox)
                 {
-                    item.Text = " ";
+                    item.Text = "";
                 }
             }
         }
@@ -152,18 +152,22 @@ namespace bireyselKutuphane
                         {
                             try
                             {
+                                Temizle();
                                 komut.Connection.Open();
                                 komut.ExecuteNonQuery();
                                 MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
+                                
                             }
                             catch (Exception hata)
                             {
                                 MessageBox.Show(hata.Message);
+                                Temizle();
                             }
                         }
                         else
                         {
                             MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
+                            Temizle();
                         }
                     }
                 }

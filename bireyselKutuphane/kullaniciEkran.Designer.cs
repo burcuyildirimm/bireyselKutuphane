@@ -54,6 +54,7 @@ namespace bireyselKutuphane
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "kullaniciEkran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kullaniciEkran";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

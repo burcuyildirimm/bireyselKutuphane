@@ -36,6 +36,7 @@ namespace bireyselKutuphane
             this.label1 = new System.Windows.Forms.Label();
             this.idAraTxt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.kategoriCmb = new System.Windows.Forms.ComboBox();
             this.ekleBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.adetTxt = new System.Windows.Forms.TextBox();
@@ -69,7 +70,7 @@ namespace bireyselKutuphane
             this.label4 = new System.Windows.Forms.Label();
             this.kitapIdTxt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kategoriCmb = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,7 +94,7 @@ namespace bireyselKutuphane
             this.listeleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.listeleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listeleBtn.ForeColor = System.Drawing.Color.Black;
-            this.listeleBtn.Location = new System.Drawing.Point(1560, 115);
+            this.listeleBtn.Location = new System.Drawing.Point(1626, 119);
             this.listeleBtn.Name = "listeleBtn";
             this.listeleBtn.Size = new System.Drawing.Size(127, 52);
             this.listeleBtn.TabIndex = 36;
@@ -176,6 +177,32 @@ namespace bireyselKutuphane
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kitap";
             // 
+            // kategoriCmb
+            // 
+            this.kategoriCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kategoriCmb.ForeColor = System.Drawing.Color.DimGray;
+            this.kategoriCmb.FormattingEnabled = true;
+            this.kategoriCmb.Items.AddRange(new object[] {
+            "Edebiyat",
+            "Felsefe",
+            "Çocuk Gelişim",
+            "Fantastik",
+            "Bilim Kurgu",
+            "Polisiye",
+            "Dini-Tasavvuf",
+            "Biyografi",
+            "Deneme",
+            "Eğitim",
+            "Tiyatro",
+            "Tarih",
+            "Çizgi Roman",
+            "Sanat-Tasarım",
+            "Yemek"});
+            this.kategoriCmb.Location = new System.Drawing.Point(140, 363);
+            this.kategoriCmb.Name = "kategoriCmb";
+            this.kategoriCmb.Size = new System.Drawing.Size(121, 28);
+            this.kategoriCmb.TabIndex = 40;
+            // 
             // ekleBtn
             // 
             this.ekleBtn.BackColor = System.Drawing.Color.DarkGray;
@@ -195,7 +222,7 @@ namespace bireyselKutuphane
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(9, 38);
+            this.label2.Location = new System.Drawing.Point(9, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 39;
@@ -203,7 +230,7 @@ namespace bireyselKutuphane
             // 
             // adetTxt
             // 
-            this.adetTxt.Location = new System.Drawing.Point(104, 38);
+            this.adetTxt.Location = new System.Drawing.Point(104, 79);
             this.adetTxt.Name = "adetTxt";
             this.adetTxt.Size = new System.Drawing.Size(157, 22);
             this.adetTxt.TabIndex = 38;
@@ -367,7 +394,7 @@ namespace bireyselKutuphane
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(9, 160);
+            this.label10.Location = new System.Drawing.Point(9, 201);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 20);
             this.label10.TabIndex = 16;
@@ -375,7 +402,7 @@ namespace bireyselKutuphane
             // 
             // baskıTxt
             // 
-            this.baskıTxt.Location = new System.Drawing.Point(104, 160);
+            this.baskıTxt.Location = new System.Drawing.Point(104, 201);
             this.baskıTxt.Name = "baskıTxt";
             this.baskıTxt.Size = new System.Drawing.Size(157, 22);
             this.baskıTxt.TabIndex = 17;
@@ -385,7 +412,7 @@ namespace bireyselKutuphane
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(9, 120);
+            this.label9.Location = new System.Drawing.Point(9, 161);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 14;
@@ -393,7 +420,7 @@ namespace bireyselKutuphane
             // 
             // isbnTxt
             // 
-            this.isbnTxt.Location = new System.Drawing.Point(104, 120);
+            this.isbnTxt.Location = new System.Drawing.Point(104, 161);
             this.isbnTxt.Name = "isbnTxt";
             this.isbnTxt.Size = new System.Drawing.Size(157, 22);
             this.isbnTxt.TabIndex = 15;
@@ -422,7 +449,7 @@ namespace bireyselKutuphane
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(9, 79);
+            this.label7.Location = new System.Drawing.Point(9, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 20);
             this.label7.TabIndex = 10;
@@ -430,7 +457,7 @@ namespace bireyselKutuphane
             // 
             // ciltTxt
             // 
-            this.ciltTxt.Location = new System.Drawing.Point(104, 79);
+            this.ciltTxt.Location = new System.Drawing.Point(104, 120);
             this.ciltTxt.Name = "ciltTxt";
             this.ciltTxt.Size = new System.Drawing.Size(157, 22);
             this.ciltTxt.TabIndex = 11;
@@ -469,7 +496,7 @@ namespace bireyselKutuphane
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(9, 200);
+            this.label4.Location = new System.Drawing.Point(9, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 4;
@@ -477,10 +504,11 @@ namespace bireyselKutuphane
             // 
             // kitapIdTxt
             // 
-            this.kitapIdTxt.Location = new System.Drawing.Point(104, 200);
+            this.kitapIdTxt.Location = new System.Drawing.Point(104, 38);
             this.kitapIdTxt.Name = "kitapIdTxt";
             this.kitapIdTxt.Size = new System.Drawing.Size(157, 22);
             this.kitapIdTxt.TabIndex = 5;
+            this.kitapIdTxt.TextChanged += new System.EventHandler(this.kitapIdTxt_TextChanged);
             // 
             // dataGridView1
             // 
@@ -494,37 +522,26 @@ namespace bireyselKutuphane
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // kategoriCmb
+            // button2
             // 
-            this.kategoriCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kategoriCmb.ForeColor = System.Drawing.Color.DimGray;
-            this.kategoriCmb.FormattingEnabled = true;
-            this.kategoriCmb.Items.AddRange(new object[] {
-            "Edebiyat",
-            "Felsefe",
-            "Çocuk Gelişim",
-            "Fantastik",
-            "Bilim Kurgu",
-            "Polisiye",
-            "Dini-Tasavvuf",
-            "Biyografi",
-            "Deneme",
-            "Eğitim",
-            "Tiyatro",
-            "Tarih",
-            "Çizgi Roman",
-            "Sanat-Tasarım",
-            "Yemek"});
-            this.kategoriCmb.Location = new System.Drawing.Point(140, 363);
-            this.kategoriCmb.Name = "kategoriCmb";
-            this.kategoriCmb.Size = new System.Drawing.Size(121, 28);
-            this.kategoriCmb.TabIndex = 40;
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(1626, 670);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 52);
+            this.button2.TabIndex = 37;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // kitapListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1813, 774);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.listeleBtn);
             this.Controls.Add(this.araBtn);
             this.Controls.Add(this.label1);
@@ -533,6 +550,7 @@ namespace bireyselKutuphane
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "kitapListele";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitapListele";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -585,5 +603,6 @@ namespace bireyselKutuphane
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ekleBtn;
         private System.Windows.Forms.ComboBox kategoriCmb;
+        private System.Windows.Forms.Button button2;
     }
 }

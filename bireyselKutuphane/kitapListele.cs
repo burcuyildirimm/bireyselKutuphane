@@ -40,6 +40,7 @@ namespace bireyselKutuphane
             verileriGoster("select*from kitap");
             baglanti.Close();
             
+            
         }
 
         private void listeleBtn_Click(object sender, EventArgs e)
@@ -116,6 +117,28 @@ namespace bireyselKutuphane
             yazarIdTxt.Text = yazarid;
             cevirmenIdTxt.Text = cevirmenid;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            personelEkran personel = new personelEkran();
+            personel.Show();
+        }
+
+        private void kitapIdTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (kitapIdTxt.Text == "")
+            {
+                foreach (Control item in groupBox2.Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        item.Text = "";
+
+                    }
+                }
+            }
         }
     }
 }

@@ -35,6 +35,13 @@ namespace bireyselKutuphane
                 emanetAlma.Show();
                 this.Hide();
             }
+            else if(emanetIslemleriCmb.Text== "Emanet Kitap Listeleme")
+            {
+                emanetKitapListele emanet = new emanetKitapListele();
+                emanet.Show();
+                this.Hide();
+
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -64,6 +71,18 @@ namespace bireyselKutuphane
             kitapListele kitapListele = new kitapListele();
             kitapListele.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog;
+            dialog = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz", "Evet", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialog == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 form1 = new Form1();
+                form1.Show();
+            }
         }
     }
 }

@@ -34,6 +34,8 @@ namespace bireyselKutuphane
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.okunanKitapTxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.idTxt = new System.Windows.Forms.TextBox();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -122,7 +124,7 @@ namespace bireyselKutuphane
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.PapayaWhip;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1655, 74);
+            this.pictureBox2.Location = new System.Drawing.Point(1684, 77);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 85);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,6 +134,8 @@ namespace bireyselKutuphane
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.groupBox1.Controls.Add(this.okunanKitapTxt);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.radioButton5);
             this.groupBox1.Controls.Add(this.idTxt);
             this.groupBox1.Controls.Add(this.radioButton6);
@@ -153,12 +157,30 @@ namespace bireyselKutuphane
             this.groupBox1.Text = "Üye Bilgileri";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // okunanKitapTxt
+            // 
+            this.okunanKitapTxt.Location = new System.Drawing.Point(359, 72);
+            this.okunanKitapTxt.Name = "okunanKitapTxt";
+            this.okunanKitapTxt.Size = new System.Drawing.Size(157, 22);
+            this.okunanKitapTxt.TabIndex = 60;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(354, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 20);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Okunan Kitap Sayısı";
+            // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton5.Location = new System.Drawing.Point(334, 166);
+            this.radioButton5.Location = new System.Drawing.Point(455, 199);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(104, 24);
             this.radioButton5.TabIndex = 57;
@@ -179,7 +201,7 @@ namespace bireyselKutuphane
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton6.Location = new System.Drawing.Point(334, 113);
+            this.radioButton6.Location = new System.Drawing.Point(334, 197);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(89, 24);
             this.radioButton6.TabIndex = 56;
@@ -192,7 +214,7 @@ namespace bireyselKutuphane
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(330, 72);
+            this.label12.Location = new System.Drawing.Point(366, 174);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(147, 20);
             this.label12.TabIndex = 58;
@@ -834,5 +856,7 @@ namespace bireyselKutuphane
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label sayi3;
         private System.Windows.Forms.Label sayi4;
+        private System.Windows.Forms.TextBox okunanKitapTxt;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -94,7 +94,7 @@ namespace bireyselKutuphane
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.parolaTxt);
             this.groupBox1.Controls.Add(this.kullaniciIdTxt);
-            this.groupBox1.Location = new System.Drawing.Point(280, 269);
+            this.groupBox1.Location = new System.Drawing.Point(284, 269);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(509, 455);
             this.groupBox1.TabIndex = 1;
@@ -238,7 +238,7 @@ namespace bireyselKutuphane
             this.groupBox2.Controls.Add(this.kartIdTxt);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.idTxt);
-            this.groupBox2.Location = new System.Drawing.Point(1011, 269);
+            this.groupBox2.Location = new System.Drawing.Point(1017, 269);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(509, 455);
             this.groupBox2.TabIndex = 11;
@@ -475,6 +475,7 @@ namespace bireyselKutuphane
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Giriş Paneli";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

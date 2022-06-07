@@ -33,6 +33,8 @@ namespace bireyselKutuphane
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.okunanKitapTxt = new System.Windows.Forms.TextBox();
             this.silBtn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.parola2Txt = new System.Windows.Forms.TextBox();
@@ -98,18 +100,20 @@ namespace bireyselKutuphane
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PapayaWhip;
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.okunanKitapTxt);
             this.groupBox2.Controls.Add(this.silBtn);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.parola2Txt);
             this.groupBox2.Controls.Add(this.guncelleBtn);
             this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton6);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.bolumIdTxt);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.radioButton5);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.mailTxt);
+            this.groupBox2.Controls.Add(this.radioButton6);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.adresTxt);
             this.groupBox2.Controls.Add(this.label8);
@@ -124,10 +128,28 @@ namespace bireyselKutuphane
             this.groupBox2.Controls.Add(this.idTxt);
             this.groupBox2.Location = new System.Drawing.Point(12, 177);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(730, 455);
+            this.groupBox2.Size = new System.Drawing.Size(730, 427);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Üye Bilgileri";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(327, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 20);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Okunan Kitap Sayısı";
+            // 
+            // okunanKitapTxt
+            // 
+            this.okunanKitapTxt.Location = new System.Drawing.Point(496, 40);
+            this.okunanKitapTxt.Name = "okunanKitapTxt";
+            this.okunanKitapTxt.Size = new System.Drawing.Size(157, 22);
+            this.okunanKitapTxt.TabIndex = 29;
             // 
             // silBtn
             // 
@@ -136,7 +158,7 @@ namespace bireyselKutuphane
             this.silBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.silBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.silBtn.ForeColor = System.Drawing.Color.Black;
-            this.silBtn.Location = new System.Drawing.Point(543, 258);
+            this.silBtn.Location = new System.Drawing.Point(526, 311);
             this.silBtn.Name = "silBtn";
             this.silBtn.Size = new System.Drawing.Size(127, 49);
             this.silBtn.TabIndex = 27;
@@ -169,7 +191,7 @@ namespace bireyselKutuphane
             this.guncelleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guncelleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.guncelleBtn.ForeColor = System.Drawing.Color.Black;
-            this.guncelleBtn.Location = new System.Drawing.Point(367, 256);
+            this.guncelleBtn.Location = new System.Drawing.Point(359, 311);
             this.guncelleBtn.Name = "guncelleBtn";
             this.guncelleBtn.Size = new System.Drawing.Size(127, 49);
             this.guncelleBtn.TabIndex = 24;
@@ -181,7 +203,7 @@ namespace bireyselKutuphane
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton4.Location = new System.Drawing.Point(512, 81);
+            this.radioButton4.Location = new System.Drawing.Point(446, 213);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(96, 24);
             this.radioButton4.TabIndex = 23;
@@ -195,7 +217,7 @@ namespace bireyselKutuphane
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(288, 42);
+            this.label12.Location = new System.Drawing.Point(424, 124);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(147, 20);
             this.label12.TabIndex = 22;
@@ -206,7 +228,7 @@ namespace bireyselKutuphane
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton5.Location = new System.Drawing.Point(579, 42);
+            this.radioButton5.Location = new System.Drawing.Point(526, 173);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(104, 24);
             this.radioButton5.TabIndex = 21;
@@ -220,7 +242,7 @@ namespace bireyselKutuphane
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton6.Location = new System.Drawing.Point(466, 42);
+            this.radioButton6.Location = new System.Drawing.Point(381, 173);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(89, 24);
             this.radioButton6.TabIndex = 20;
@@ -471,7 +493,7 @@ namespace bireyselKutuphane
             this.listeleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.listeleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listeleBtn.ForeColor = System.Drawing.Color.Black;
-            this.listeleBtn.Location = new System.Drawing.Point(1606, 115);
+            this.listeleBtn.Location = new System.Drawing.Point(1672, 119);
             this.listeleBtn.Name = "listeleBtn";
             this.listeleBtn.Size = new System.Drawing.Size(127, 52);
             this.listeleBtn.TabIndex = 30;
@@ -485,7 +507,7 @@ namespace bireyselKutuphane
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1729, 709);
+            this.button1.Location = new System.Drawing.Point(1672, 709);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 52);
             this.button1.TabIndex = 31;
@@ -561,5 +583,7 @@ namespace bireyselKutuphane
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button listeleBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox okunanKitapTxt;
     }
 }

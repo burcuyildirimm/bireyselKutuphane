@@ -189,6 +189,7 @@ namespace bireyselKutuphane
                 string kartId = dataGridView1.Rows[seciliAlan].Cells[4].Value.ToString();
                 string telefon = dataGridView1.Rows[seciliAlan].Cells[7].Value.ToString();
                 string bolumId = dataGridView1.Rows[seciliAlan].Cells[1].Value.ToString();
+                string okunan_kitap = dataGridView1.Rows[seciliAlan].Cells[9].Value.ToString();
 
                 idTxt.Text = id;
                 adTxt.Text = ad;
@@ -199,6 +200,7 @@ namespace bireyselKutuphane
                 kartIdTxt.Text = kartId;
                 telTxt.Text = telefon;
                 bolumIdTxt.Text = bolumId;
+                okunanKitapTxt.Text = okunan_kitap;
             }
             else if (radioButton2.Checked)
             {
@@ -211,6 +213,7 @@ namespace bireyselKutuphane
                 string parola = dataGridView1.Rows[seciliAlan].Cells[7].Value.ToString();
                 string kartId = dataGridView1.Rows[seciliAlan].Cells[1].Value.ToString();
                 string telefon = dataGridView1.Rows[seciliAlan].Cells[4].Value.ToString();
+                string okunan_kitap = dataGridView1.Rows[seciliAlan].Cells[8].Value.ToString();
 
                 idTxt.Text = id;
                 adTxt.Text = ad;
@@ -219,7 +222,8 @@ namespace bireyselKutuphane
                 adresTxt.Text = adres;
                 parola2Txt.Text = parola;
                 kartIdTxt.Text = kartId;
-                telTxt.Text = telefon;    
+                telTxt.Text = telefon;
+                okunanKitapTxt.Text = okunan_kitap;
             }
             else if (radioButton1.Checked)
             {

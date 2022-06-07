@@ -53,6 +53,12 @@
     <Compile Include="emanetAlma.Designer.cs">
       <DependentUpon>emanetAlma.cs</DependentUpon>
     </Compile>
+    <Compile Include="emanetKitapIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emanetKitapIade.Designer.cs">
+      <DependentUpon>emanetKitapIade.cs</DependentUpon>
+    </Compile>
     <Compile Include="emanetKitapListele.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="emanetAlma.resx">
       <DependentUpon>emanetAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emanetKitapIade.resx">
+      <DependentUpon>emanetKitapIade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="emanetKitapListele.resx">
       <DependentUpon>emanetKitapListele.cs</DependentUpon>

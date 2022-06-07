@@ -42,6 +42,12 @@ namespace bireyselKutuphane
                 this.Hide();
 
             }
+            else if(emanetIslemleriCmb.Text== "Emanet Kitap Verme")
+            {
+                emanetKitapIade emanetKitapIade = new emanetKitapIade();
+                emanetKitapIade.Show();
+                this.Hide();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)

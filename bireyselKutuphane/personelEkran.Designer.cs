@@ -52,7 +52,7 @@ namespace bireyselKutuphane
             label1.BackColor = System.Drawing.Color.PapayaWhip;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             label1.ForeColor = System.Drawing.Color.DimGray;
-            label1.Location = new System.Drawing.Point(33, 422);
+            label1.Location = new System.Drawing.Point(176, 432);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(286, 25);
             label1.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace bireyselKutuphane
             label2.BackColor = System.Drawing.Color.PapayaWhip;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             label2.ForeColor = System.Drawing.Color.DimGray;
-            label2.Location = new System.Drawing.Point(33, 194);
+            label2.Location = new System.Drawing.Point(176, 194);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(254, 25);
             label2.TabIndex = 4;
@@ -78,7 +78,7 @@ namespace bireyselKutuphane
             label3.BackColor = System.Drawing.Color.PapayaWhip;
             label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             label3.ForeColor = System.Drawing.Color.DimGray;
-            label3.Location = new System.Drawing.Point(33, 311);
+            label3.Location = new System.Drawing.Point(176, 311);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(155, 25);
             label3.TabIndex = 6;
@@ -95,7 +95,7 @@ namespace bireyselKutuphane
             "Emanet Kitap Alma",
             "Emanet Kitap Verme",
             "Emanet Kitap Listeleme"});
-            this.emanetIslemleriCmb.Location = new System.Drawing.Point(353, 308);
+            this.emanetIslemleriCmb.Location = new System.Drawing.Point(528, 308);
             this.emanetIslemleriCmb.Name = "emanetIslemleriCmb";
             this.emanetIslemleriCmb.Size = new System.Drawing.Size(230, 28);
             this.emanetIslemleriCmb.TabIndex = 5;
@@ -107,7 +107,7 @@ namespace bireyselKutuphane
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1251, 753);
+            this.pictureBox1.Size = new System.Drawing.Size(1555, 753);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -116,7 +116,7 @@ namespace bireyselKutuphane
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.PapayaWhip;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1100, 70);
+            this.pictureBox2.Location = new System.Drawing.Point(1404, 72);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(151, 115);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,7 +128,7 @@ namespace bireyselKutuphane
             this.button1.BackColor = System.Drawing.Color.PapayaWhip;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(353, 412);
+            this.button1.Location = new System.Drawing.Point(528, 422);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(230, 46);
             this.button1.TabIndex = 8;
@@ -141,7 +141,7 @@ namespace bireyselKutuphane
             this.kitapBtn.BackColor = System.Drawing.Color.PapayaWhip;
             this.kitapBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kitapBtn.ForeColor = System.Drawing.Color.DimGray;
-            this.kitapBtn.Location = new System.Drawing.Point(353, 194);
+            this.kitapBtn.Location = new System.Drawing.Point(528, 194);
             this.kitapBtn.Name = "kitapBtn";
             this.kitapBtn.Size = new System.Drawing.Size(230, 46);
             this.kitapBtn.TabIndex = 9;
@@ -156,7 +156,7 @@ namespace bireyselKutuphane
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1089, 665);
+            this.button2.Location = new System.Drawing.Point(1416, 677);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 52);
             this.button2.TabIndex = 32;
@@ -167,7 +167,7 @@ namespace bireyselKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 753);
+            this.ClientSize = new System.Drawing.Size(1555, 753);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.kitapBtn);
             this.Controls.Add(this.button1);

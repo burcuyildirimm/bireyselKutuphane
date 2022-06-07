@@ -29,8 +29,8 @@ namespace bireyselKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(emanetKitapListele));
             System.Windows.Forms.Label label3;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(emanetKitapListele));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
@@ -40,13 +40,25 @@ namespace bireyselKutuphane
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.PapayaWhip;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            label3.ForeColor = System.Drawing.Color.DimGray;
+            label3.Location = new System.Drawing.Point(791, 153);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(69, 25);
+            label3.TabIndex = 36;
+            label3.Text = "Filtrele";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1414, 758);
+            this.pictureBox1.Size = new System.Drawing.Size(1246, 758);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -55,7 +67,7 @@ namespace bireyselKutuphane
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(420, 205);
+            this.dataGridView1.Location = new System.Drawing.Point(159, 198);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -70,25 +82,12 @@ namespace bireyselKutuphane
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1259, 694);
+            this.button2.Location = new System.Drawing.Point(998, 670);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 52);
             this.button2.TabIndex = 34;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = System.Drawing.Color.PapayaWhip;
-            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            label3.ForeColor = System.Drawing.Color.DimGray;
-            label3.Location = new System.Drawing.Point(910, 127);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(69, 25);
-            label3.TabIndex = 36;
-            label3.Text = "Filtrele";
-            
             // 
             // filtreleCmb
             // 
@@ -100,7 +99,7 @@ namespace bireyselKutuphane
             "Tüm Kitaplar",
             "Geciken Kitaplar",
             "Gecikmeyen Kitaplar"});
-            this.filtreleCmb.Location = new System.Drawing.Point(1011, 127);
+            this.filtreleCmb.Location = new System.Drawing.Point(895, 153);
             this.filtreleCmb.Name = "filtreleCmb";
             this.filtreleCmb.Size = new System.Drawing.Size(230, 28);
             this.filtreleCmb.TabIndex = 35;
@@ -110,7 +109,7 @@ namespace bireyselKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1414, 758);
+            this.ClientSize = new System.Drawing.Size(1246, 758);
             this.Controls.Add(label3);
             this.Controls.Add(this.filtreleCmb);
             this.Controls.Add(this.button2);

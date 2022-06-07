@@ -46,9 +46,8 @@ namespace bireyselKutuphane
 
         private void ekleBtn_Click(object sender, EventArgs e)
         {
-           
             baglanti.Open();
-            MySqlCommand komut = new MySqlCommand($"insert into sepet (adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili,alis_tarihi,veris_tarihi) values('{adetTxt.Text}','{isbnTxt.Text}','{baskıTxt.Text}','{kitapIdTxt.Text}','{yazarIdTxt.Text}','{kitapAdTxt.Text}','{yayınYiliTxt.Text}','{yayıneviIdTxt.Text}','{cevirmenIdTxt.Text}','{sayfaSayTxt.Text}','{rafKonumTxt.Text}','{cevirmeYiliTxt.Text}','{dateTimePicker1.Value}','{dateTimePicker2.Value}')", baglanti);
+            MySqlCommand komut = new MySqlCommand($"insert into sepet (adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili,alis_tarihi,veris_tarihi) values('{adetTxt.Text}','{isbnTxt.Text}','{baskıTxt.Text}','{kitapIdTxt.Text}','{yazarIdTxt.Text}','{kitapAdTxt.Text}','{yayınYiliTxt.Text}','{yayıneviIdTxt.Text}','{cevirmenIdTxt.Text}','{sayfaSayTxt.Text}','{rafKonumTxt.Text}','{cevirmeYiliTxt.Text}','{dateTimePicker1.Text}','{dateTimePicker2.Text}')", baglanti);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Kitap(lar) sepete eklendi.");
@@ -78,7 +77,11 @@ namespace bireyselKutuphane
        
         private void emanetAlma_Load(object sender, EventArgs e)
         {
+            idTxt.Text = "";
+            sayi4.Text = "";
+            sayi3.Text = "";
             sepetListele();
+            kitapSayisi();
         }
 
         private void idTxt_TextChanged(object sender, EventArgs e)
@@ -94,6 +97,7 @@ namespace bireyselKutuphane
                     mailTxt.Text = read["mail"].ToString();
                     soyadTxt.Text = read["ogrenci_soyad"].ToString();
                     telTxt.Text = read["tel_no"].ToString();
+                    okunanKitapTxt.Text = read["okunan_kitap"].ToString();
 
                 }
             }
@@ -107,6 +111,7 @@ namespace bireyselKutuphane
                     mailTxt.Text = read["mail"].ToString();
                     soyadTxt.Text = read["ogretmen_soyad"].ToString();
                     telTxt.Text = read["tel_no"].ToString();
+                    okunanKitapTxt.Text = read["okunan_kitap"].ToString();
 
                 }
 
@@ -118,7 +123,7 @@ namespace bireyselKutuphane
             baglanti.Close();
             baglanti.Open();
             MySqlCommand mySqlCommand = new MySqlCommand("select sum(adet) from emanet where id='"+idTxt.Text+"'",baglanti);
-            sayi3.Text = mySqlCommand.ExecuteScalar().ToString();
+            sayi4.Text = mySqlCommand.ExecuteScalar().ToString();
             baglanti.Close();
             if (idTxt.Text == "")
             {
@@ -126,9 +131,10 @@ namespace bireyselKutuphane
                 {if (item is TextBox)
                     {
                         item.Text = "";
-                        sayi3.Text = "";
+                        
                     }
                 }
+                sayi3.Text = "";
             }
         }
 
@@ -151,7 +157,6 @@ namespace bireyselKutuphane
             {
                 isbnTxt.Text = read["isbn"].ToString();
                 baskıTxt.Text = read["baski"].ToString();
-                adetTxt.Text = read["adet"].ToString();
                 yazarIdTxt.Text = read["yazar_id"].ToString();
                 kitapAdTxt.Text = read["kitap_adi"].ToString();
                 yayınYiliTxt.Text = read["yayin_yili"].ToString();
@@ -185,6 +190,7 @@ namespace bireyselKutuphane
             MessageBox.Show("Silme işlemi gerçekleşti");
             dataSet.Tables["sepet"].Clear();
             sepetListele();
+            sayi4.Text = "";
             kitapSayisi();
         }
 
@@ -194,18 +200,18 @@ namespace bireyselKutuphane
             {
                 if (sayi3.Text==""&&int.Parse(sayi4.Text)<=3||sayi3.Text!=""&&int.Parse(sayi3.Text)+int.Parse(sayi4.Text)<=3)
                 {
-                    if (idTxt.Text!=""&&adTxt.Text!=" "&&soyadTxt.Text!=""&&mailTxt.Text!=" "&&telTxt.Text!="")
-                    {for(int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    if (idTxt.Text!=""&&adTxt.Text!=""&&soyadTxt.Text!=""&&mailTxt.Text!=""&&telTxt.Text!="")
+                    {for(int i = 0; i < dataGridView1.Rows.Count -1; i++)
                         {
                             baglanti.Open();
                             MySqlCommand komut = new MySqlCommand("insert into emanet(alis_tarihi,veris_tarihi,id,adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili)values(@alis_tarihi,@veris_tarihi,@id,@adet,@isbn,@baski,@kitap_id,@yazar_id,@kitap_adi,@yayin_yili,@yayinevi_id,@cevirmen_id,@sayfa_sayisi,@raf_konumu,@cevirme_yili)", baglanti);
                             komut.Parameters.AddWithValue("alis_tarihi", dataGridView1.Rows[i].Cells["alis_tarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("veris_tarihi", dataGridView1.Rows[i].Cells["veris_tarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("@id", idTxt.Text);
-                            komut.Parameters.AddWithValue("ad", adTxt.Text);
-                            komut.Parameters.AddWithValue("soyad",soyadTxt.Text);
-                            komut.Parameters.AddWithValue("mail",mailTxt.Text);
-                            komut.Parameters.AddWithValue("telefon", telTxt.Text);
+                            komut.Parameters.AddWithValue("@ad", adTxt.Text);
+                            komut.Parameters.AddWithValue("@soyad",soyadTxt.Text);
+                            komut.Parameters.AddWithValue("@mail",mailTxt.Text);
+                            komut.Parameters.AddWithValue("@telefon", telTxt.Text);
                             komut.Parameters.AddWithValue("adet",int.Parse( dataGridView1.Rows[i].Cells["adet"].Value.ToString()));
                             komut.Parameters.AddWithValue("isbn",int.Parse( dataGridView1.Rows[i].Cells["isbn"].Value.ToString()));
                             komut.Parameters.AddWithValue("baski", int.Parse(dataGridView1.Rows[i].Cells["baski"].Value.ToString()));
@@ -217,10 +223,22 @@ namespace bireyselKutuphane
                             komut.Parameters.AddWithValue("cevirmen_id", int.Parse(dataGridView1.Rows[i].Cells["cevirmen_id"].Value.ToString()));
                             komut.Parameters.AddWithValue("sayfa_sayisi",int.Parse( dataGridView1.Rows[i].Cells["sayfa_sayisi"].Value.ToString()));
                             komut.Parameters.AddWithValue("raf_konumu", dataGridView1.Rows[i].Cells["raf_konumu"].Value.ToString());
-                            komut.Parameters.AddWithValue("cevirme_yili",int.Parse( dataGridView1.Rows[i].Cells["cevirme_yili"].Value.ToString()));
-               
+                            komut.Parameters.AddWithValue("cevirme_yili",int.Parse( dataGridView1.Rows[i].Cells["cevirme_yili"].Value.ToString()));      
                             komut.ExecuteNonQuery();
-                            
+                            if (radioButton6.Checked)
+                            {
+                                MySqlCommand mySql = new MySqlCommand("update ogrenci set okunan_kitap=okunan_kitap+'"+int.Parse(dataGridView1.Rows[i].Cells["adet"].Value.ToString())+"'where ogrenci_id='"+idTxt.Text+"'", baglanti);
+                                mySql.ExecuteNonQuery();
+                                MySqlCommand mySql2 = new MySqlCommand("update kitap set adet=adet-'" + int.Parse(dataGridView1.Rows[i].Cells["adet"].Value.ToString()) + "'where kitap_id='" + dataGridView1.Rows[i].Cells["kitap_id"].Value.ToString() + "'", baglanti);
+                                mySql2.ExecuteNonQuery();
+                            }
+                            else if (radioButton5.Checked)
+                            {
+                                MySqlCommand mySql = new MySqlCommand("update ogretmen set okunan_kitap=okunan_kitap+'" + int.Parse(dataGridView1.Rows[i].Cells["adet"].Value.ToString()) + "'where ogretmen_id='" + idTxt.Text + "'", baglanti);
+                                mySql.ExecuteNonQuery();
+                                MySqlCommand mySql2 = new MySqlCommand("update kitap set adet=adet-'" + int.Parse(dataGridView1.Rows[i].Cells["adet"].Value.ToString()) + "'where kitap_id='" + dataGridView1.Rows[i].Cells["kitap_id"].Value.ToString() + "'", baglanti);
+                                mySql2.ExecuteNonQuery();
+                            }
                             baglanti.Close();
                         }
                         baglanti.Open();

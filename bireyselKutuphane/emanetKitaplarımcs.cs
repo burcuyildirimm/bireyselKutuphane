@@ -65,5 +65,15 @@ namespace bireyselKutuphane
         {
 
         }
+
+        private void idAraTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (idAraTxt.Text == "")
+            {
+                emanetLbl.Text = "";
+                adLbl.Text = "";
+            }
+
+        }
     }
 }

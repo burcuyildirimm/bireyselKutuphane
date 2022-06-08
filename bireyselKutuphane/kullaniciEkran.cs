@@ -19,9 +19,14 @@ namespace bireyselKutuphane
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form1 = new Form1();
-           form1.Show();
+            DialogResult dialog;
+            dialog = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz", "Evet", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialog == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 form1 = new Form1();
+                form1.Show();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

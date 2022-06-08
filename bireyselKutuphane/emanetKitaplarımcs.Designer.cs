@@ -123,6 +123,7 @@ namespace bireyselKutuphane
             this.idAraTxt.Name = "idAraTxt";
             this.idAraTxt.Size = new System.Drawing.Size(157, 27);
             this.idAraTxt.TabIndex = 48;
+            this.idAraTxt.TextChanged += new System.EventHandler(this.idAraTxt_TextChanged);
             // 
             // emanetLbl
             // 

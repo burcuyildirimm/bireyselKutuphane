@@ -82,7 +82,7 @@ namespace bireyselKutuphane
             baglan.Open();
             if (radioButton1.Checked)
             {  
-                if (girismetot.kullaniciKontrolOgrenci(Convert.ToInt32(kullaniciIdTxt.Text),(parolaTxt.Text).ToString())==1)
+                if (girismetot.kullaniciKontrolOgrenci(Convert.ToInt32(idTxt.Text),(parolaTxt.Text).ToString())==1)
                 {   
                     kullaniciEkran kullaniciEkran = new kullaniciEkran();
                     kullaniciEkran.Show();
@@ -95,7 +95,7 @@ namespace bireyselKutuphane
             }
             else if (radioButton2.Checked)
             {
-                if (girismetot.kullaniciKontrolOgretmen(Convert.ToInt32(kullaniciIdTxt.Text), parolaTxt.Text) == 1)
+                if (girismetot.kullaniciKontrolOgretmen(Convert.ToInt32(idTxt.Text), (parolaTxt.Text).ToString()) == 1)
                 {
                     kullaniciEkran kullaniciEkran = new kullaniciEkran();
                     kullaniciEkran.Show();
@@ -110,7 +110,7 @@ namespace bireyselKutuphane
             }
             else if (radioButton3.Checked)
             {
-                if (girismetot.kullaniciKontrolPersonel(Convert.ToInt32(kullaniciIdTxt.Text), (parolaTxt.Text)) == 1)
+                if (girismetot.kullaniciKontrolPersonel(Convert.ToInt32(idTxt.Text), (parolaTxt.Text).ToString()) == 1)
                 {
                     personelEkran personelEkran = new personelEkran();
                     personelEkran.Show();
@@ -147,7 +147,7 @@ namespace bireyselKutuphane
             {
                 using (var baglan = new MySqlConnection(con))
                 {
-                    using (var komut = new MySqlCommand($"INSERT INTO ogrenci(ogrenci_id,bolum_id,ogrenci_ad,ogrenci_soyad,kart_id,mail,adres,tel_no,parola)VALUES('{idTxt.Text}','{bolumIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{kartIdTxt.Text}','{mailTxt.Text}','{adresTxt.Text}','{telTxt.Text}','{parola2Txt.Text}')", baglan))
+                    using (var komut = new MySqlCommand($"INSERT INTO ogrenci(bolum_id,ogrenci_ad,ogrenci_soyad,kart_id,mail,adres,tel_no,parola)VALUES('{bolumIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{kartIdTxt.Text}','{mailTxt.Text}','{adresTxt.Text}','{telTxt.Text}','{parola2Txt.Text}')", baglan))
                     {if (durum==false)
                         {
                             try
@@ -160,7 +160,7 @@ namespace bireyselKutuphane
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
+                                MessageBox.Show("Alanları eksiksiz doldurduğunuzdan emin olun");
   
                             }
                         }
@@ -173,7 +173,7 @@ namespace bireyselKutuphane
                 if(durum2 == false) { 
                 using (var baglan = new MySqlConnection(con))
                 {
-                        using (var komut = new MySqlCommand($"INSERT INTO ogretmen(ogretmen_id,kart_id,ogretmen_ad,ogretmen_soyad,tel_no,adres,mail,parola)VALUES('{idTxt.Text}','{kartIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{telTxt.Text}','{adresTxt.Text}','{mailTxt.Text}','{parola2Txt.Text}')", baglan))
+                        using (var komut = new MySqlCommand($"INSERT INTO ogretmen(kart_id,ogretmen_ad,ogretmen_soyad,tel_no,adres,mail,parola)VALUES('{kartIdTxt.Text}','{adTxt.Text}','{soyadTxt.Text}','{telTxt.Text}','{adresTxt.Text}','{mailTxt.Text}','{parola2Txt.Text}')", baglan))
                         {
                             try
                             {
@@ -184,7 +184,7 @@ namespace bireyselKutuphane
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
+                                MessageBox.Show("Alanları eksiksiz doldurduğunuzdan emin olun");
                               
                             }
                         }

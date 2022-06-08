@@ -40,7 +40,7 @@ namespace bireyselKutuphane
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.parolaTxt = new System.Windows.Forms.TextBox();
-            this.mail2Txt = new System.Windows.Forms.TextBox();
+            this.idTxt = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -91,7 +91,7 @@ namespace bireyselKutuphane
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.parolaTxt);
-            this.groupBox1.Controls.Add(this.mail2Txt);
+            this.groupBox1.Controls.Add(this.idTxt);
             this.groupBox1.Location = new System.Drawing.Point(284, 269);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(509, 455);
@@ -180,9 +180,9 @@ namespace bireyselKutuphane
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(89, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.Size = new System.Drawing.Size(27, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Mail Adresi:";
+            this.label1.Text = "Id:";
             // 
             // parolaTxt
             // 
@@ -192,14 +192,14 @@ namespace bireyselKutuphane
             this.parolaTxt.TabIndex = 4;
             this.parolaTxt.UseSystemPasswordChar = true;
             // 
-            // mail2Txt
+            // idTxt
             // 
-            this.mail2Txt.Location = new System.Drawing.Point(241, 65);
-            this.mail2Txt.Name = "mail2Txt";
-            this.mail2Txt.Size = new System.Drawing.Size(157, 22);
-            this.mail2Txt.TabIndex = 3;
-            this.mail2Txt.TextChanged += new System.EventHandler(this.kullaniciKartIdTxt_TextChanged);
-            this.mail2Txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kullaniciKartIdTxt_KeyPress);
+            this.idTxt.Location = new System.Drawing.Point(241, 65);
+            this.idTxt.Name = "idTxt";
+            this.idTxt.Size = new System.Drawing.Size(157, 22);
+            this.idTxt.TabIndex = 3;
+            this.idTxt.TextChanged += new System.EventHandler(this.kullaniciKartIdTxt_TextChanged);
+            this.idTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kullaniciKartIdTxt_KeyPress);
             // 
             // pictureBox2
             // 
@@ -473,7 +473,7 @@ namespace bireyselKutuphane
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox parolaTxt;
-        private System.Windows.Forms.TextBox mail2Txt;
+        private System.Windows.Forms.TextBox idTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;

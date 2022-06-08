@@ -249,7 +249,7 @@ namespace bireyselKutuphane
             // 
             // cevirmenIdTxt
             // 
-            this.cevirmenIdTxt.Location = new System.Drawing.Point(491, 120);
+            this.cevirmenIdTxt.Location = new System.Drawing.Point(502, 120);
             this.cevirmenIdTxt.Name = "cevirmenIdTxt";
             this.cevirmenIdTxt.Size = new System.Drawing.Size(157, 22);
             this.cevirmenIdTxt.TabIndex = 37;
@@ -267,7 +267,7 @@ namespace bireyselKutuphane
             // 
             // rafKonumTxt
             // 
-            this.rafKonumTxt.Location = new System.Drawing.Point(491, 198);
+            this.rafKonumTxt.Location = new System.Drawing.Point(502, 198);
             this.rafKonumTxt.Name = "rafKonumTxt";
             this.rafKonumTxt.Size = new System.Drawing.Size(157, 22);
             this.rafKonumTxt.TabIndex = 35;
@@ -303,7 +303,7 @@ namespace bireyselKutuphane
             // 
             // sayfaSayTxt
             // 
-            this.sayfaSayTxt.Location = new System.Drawing.Point(491, 158);
+            this.sayfaSayTxt.Location = new System.Drawing.Point(502, 158);
             this.sayfaSayTxt.Name = "sayfaSayTxt";
             this.sayfaSayTxt.Size = new System.Drawing.Size(157, 22);
             this.sayfaSayTxt.TabIndex = 31;
@@ -321,7 +321,7 @@ namespace bireyselKutuphane
             // 
             // yayınYiliTxt
             // 
-            this.yayınYiliTxt.Location = new System.Drawing.Point(491, 38);
+            this.yayınYiliTxt.Location = new System.Drawing.Point(502, 38);
             this.yayınYiliTxt.Name = "yayınYiliTxt";
             this.yayınYiliTxt.Size = new System.Drawing.Size(157, 22);
             this.yayınYiliTxt.TabIndex = 29;
@@ -385,7 +385,7 @@ namespace bireyselKutuphane
             // 
             // yayıneviIdTxt
             // 
-            this.yayıneviIdTxt.Location = new System.Drawing.Point(491, 79);
+            this.yayıneviIdTxt.Location = new System.Drawing.Point(502, 79);
             this.yayıneviIdTxt.Name = "yayıneviIdTxt";
             this.yayıneviIdTxt.Size = new System.Drawing.Size(157, 22);
             this.yayıneviIdTxt.TabIndex = 19;
@@ -439,7 +439,7 @@ namespace bireyselKutuphane
             // 
             // cevirmeYiliTxt
             // 
-            this.cevirmeYiliTxt.Location = new System.Drawing.Point(491, 243);
+            this.cevirmeYiliTxt.Location = new System.Drawing.Point(502, 243);
             this.cevirmeYiliTxt.Name = "cevirmeYiliTxt";
             this.cevirmeYiliTxt.Size = new System.Drawing.Size(157, 22);
             this.cevirmeYiliTxt.TabIndex = 13;

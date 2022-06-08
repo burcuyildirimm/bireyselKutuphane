@@ -51,7 +51,7 @@ namespace bireyselKutuphane
             else if (radioButton4.Checked)
             {
                 baglanti.Open();
-                MySqlCommand mySqlCommand = new MySqlCommand("update personel set personel_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',personel_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "'wherepersonel_id='" + idTxt.Text + "'", baglanti);
+                MySqlCommand mySqlCommand = new MySqlCommand("update personel set personel_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',personel_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "'where personel_id='" + idTxt.Text + "'", baglanti);
 
                 mySqlCommand.ExecuteNonQuery();
                 verileriGoster("select*from personel");

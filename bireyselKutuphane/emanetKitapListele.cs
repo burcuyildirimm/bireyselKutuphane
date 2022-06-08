@@ -59,8 +59,9 @@ namespace bireyselKutuphane
             else if (filtreleCmb.Text==("Gecikmeyen Kitaplar"))
             {
                 baglanti.Open();
+               
                 MySqlDataAdapter adapter = new MySqlDataAdapter("select*from emanet where'"+DateTime.Now.ToShortDateString()+"'<=veris_tarihi", baglanti);
-                adapter.Fill(dataSet, "emanet");
+                adapter.Fill(dataSet,"emanet");
                 dataGridView1.DataSource = dataSet.Tables["emanet"];
                 baglanti.Close();
 

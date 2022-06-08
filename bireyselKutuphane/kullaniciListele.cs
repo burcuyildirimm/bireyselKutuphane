@@ -29,12 +29,39 @@ namespace bireyselKutuphane
         }
         private void uyeOlBtn_Click(object sender, EventArgs e)//update
         {
-            baglanti.Open();
-            MySqlCommand mySqlCommand = new MySqlCommand("update ogrenci set ogrenci_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',ogrenci_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "',bolum_id='" + bolumIdTxt.Text + "'where ogrenci_id='" + idTxt.Text + "'", baglanti);
+            if (radioButton6.Checked)
+            {
+                baglanti.Open();
+                MySqlCommand mySqlCommand = new MySqlCommand("update ogrenci set ogrenci_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',ogrenci_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "',bolum_id='" + bolumIdTxt.Text+"',okunan_kitap='"+okunanKitapTxt.Text + "'where ogrenci_id='" + idTxt.Text + "'", baglanti);
 
-            mySqlCommand.ExecuteNonQuery();
-            verileriGoster("select*from ogrenci join bolum on ogrenci.bolum_id=bolum.bolum_id");
-            baglanti.Close();
+                mySqlCommand.ExecuteNonQuery();
+                verileriGoster("select*from ogrenci join bolum on ogrenci.bolum_id=bolum.bolum_id");
+                baglanti.Close();
+            }
+            else if (radioButton5.Checked)
+            {
+                baglanti.Open();
+                MySqlCommand mySqlCommand = new MySqlCommand("update ogretmen set ogretmen_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',ogretmen_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "',okunan_kitap='" + okunanKitapTxt.Text + "'where ogretmen_id='" + idTxt.Text + "'", baglanti);
+
+                mySqlCommand.ExecuteNonQuery();
+                verileriGoster("select*from ogretmen");
+                baglanti.Close();
+
+            }
+            else if (radioButton4.Checked)
+            {
+                baglanti.Open();
+                MySqlCommand mySqlCommand = new MySqlCommand("update personel set personel_ad='" + adTxt.Text + "',mail='" + mailTxt.Text + "',personel_soyad='" + soyadTxt.Text + "',adres='" + adresTxt.Text + "',parola='" + parola2Txt.Text + "',kart_id='" + kartIdTxt.Text + "',tel_no='" + telTxt.Text + "'wherepersonel_id='" + idTxt.Text + "'", baglanti);
+
+                mySqlCommand.ExecuteNonQuery();
+                verileriGoster("select*from personel");
+                baglanti.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Güncellemek istediğiniz üyenin tipini seçiniz");
+            }
 
         }
 
@@ -129,16 +156,25 @@ namespace bireyselKutuphane
                 MessageBox.Show("Lütfen kullanıcı tipini seçiniz");
             }
         }
+        public void DataGridViewSetting(DataGridView dataGridView)
+        {
+            dataGridView.BorderStyle = BorderStyle.None;
 
+        }
         private void silBtn_Click(object sender, EventArgs e)
         {if (radioButton6.Checked)
             {
-                baglanti.Open();
-                MySqlCommand komut = new MySqlCommand("delete from ogrenci where ogrenci_id=@ogrenci_id", baglanti);
-                komut.Parameters.AddWithValue("@ogrenci_id", idTxt.Text);
-                komut.ExecuteNonQuery();
-                verileriGoster("select*from ogrenci");
-                baglanti.Close();
+                DialogResult dialog;
+                dialog = MessageBox.Show("Bu kaydı silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dialog == DialogResult.Yes)
+                {
+                    baglanti.Open();
+                    MySqlCommand komut = new MySqlCommand("delete from ogrenci where ogrenci_id=@ogrenci_id", baglanti);
+                    komut.Parameters.AddWithValue("@ogrenci_id", idTxt.Text);
+                    komut.ExecuteNonQuery();
+                    verileriGoster("select*from ogrenci");
+                    baglanti.Close();
+                }
             }
         else if (radioButton5.Checked)
             {
@@ -296,6 +332,16 @@ namespace bireyselKutuphane
                     }
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

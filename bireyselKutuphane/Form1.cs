@@ -158,17 +158,13 @@ namespace bireyselKutuphane
                                 MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
                                 
                             }
-                            catch (Exception hata)
+                            catch (Exception)
                             {
-                                MessageBox.Show(hata.Message);
-                                Temizle();
+                                MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
+  
                             }
                         }
-                        else
-                        {
-                            MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
-                            Temizle();
-                        }
+                        
                     }
                 }
             }
@@ -181,22 +177,21 @@ namespace bireyselKutuphane
                         {
                             try
                             {
+                                Temizle();
                                 komut.Connection.Open();
                                 komut.ExecuteNonQuery();
                                 MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti");
                             }
-                            catch (Exception hata)
+                            catch (Exception)
                             {
-                                MessageBox.Show(hata.Message);
+                                MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
+                              
                             }
                         }
 
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Bu id ile kayıt bulunmaktadır!");
-                }
+              
 
             }
             

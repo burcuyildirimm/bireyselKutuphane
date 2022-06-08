@@ -104,7 +104,7 @@ namespace bireyselKutuphane
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1784, 805);
+            this.pictureBox1.Size = new System.Drawing.Size(1809, 805);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -124,7 +124,7 @@ namespace bireyselKutuphane
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.PapayaWhip;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1684, 77);
+            this.pictureBox2.Location = new System.Drawing.Point(1655, 77);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 85);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -760,7 +760,7 @@ namespace bireyselKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1784, 805);
+            this.ClientSize = new System.Drawing.Size(1809, 805);
             this.Controls.Add(this.sayi4);
             this.Controls.Add(this.sayi3);
             this.Controls.Add(this.button2);

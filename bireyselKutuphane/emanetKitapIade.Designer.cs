@@ -40,9 +40,6 @@ namespace bireyselKutuphane
             this.kitapIdTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -105,7 +102,7 @@ namespace bireyselKutuphane
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(1003, 205);
+            this.label4.Location = new System.Drawing.Point(1003, 297);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 20);
             this.label4.TabIndex = 39;
@@ -113,7 +110,7 @@ namespace bireyselKutuphane
             // 
             // idTxt
             // 
-            this.idTxt.Location = new System.Drawing.Point(1098, 205);
+            this.idTxt.Location = new System.Drawing.Point(1098, 297);
             this.idTxt.Name = "idTxt";
             this.idTxt.Size = new System.Drawing.Size(157, 22);
             this.idTxt.TabIndex = 40;
@@ -124,7 +121,7 @@ namespace bireyselKutuphane
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(1003, 484);
+            this.label1.Location = new System.Drawing.Point(1003, 460);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 41;
@@ -132,7 +129,7 @@ namespace bireyselKutuphane
             // 
             // kitapIdTxt
             // 
-            this.kitapIdTxt.Location = new System.Drawing.Point(1098, 484);
+            this.kitapIdTxt.Location = new System.Drawing.Point(1098, 458);
             this.kitapIdTxt.Name = "kitapIdTxt";
             this.kitapIdTxt.Size = new System.Drawing.Size(157, 22);
             this.kitapIdTxt.TabIndex = 42;
@@ -143,7 +140,7 @@ namespace bireyselKutuphane
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(1003, 148);
+            this.label2.Location = new System.Drawing.Point(1003, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(207, 20);
             this.label2.TabIndex = 43;
@@ -154,48 +151,11 @@ namespace bireyselKutuphane
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(1003, 447);
+            this.label3.Location = new System.Drawing.Point(1003, 416);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 20);
             this.label3.TabIndex = 44;
             this.label3.Text = "Kitap Id\'ye Göre Arama";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(1003, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 20);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Kullanıcı Tipini Seçiniz";
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton5.Location = new System.Drawing.Point(1132, 307);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(104, 24);
-            this.radioButton5.TabIndex = 59;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Öğretmen";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton6.Location = new System.Drawing.Point(1007, 307);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(89, 24);
-            this.radioButton6.TabIndex = 58;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Öğrenci";
-            this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -214,9 +174,6 @@ namespace bireyselKutuphane
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1530, 722);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -251,9 +208,6 @@ namespace bireyselKutuphane
         private System.Windows.Forms.TextBox kitapIdTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

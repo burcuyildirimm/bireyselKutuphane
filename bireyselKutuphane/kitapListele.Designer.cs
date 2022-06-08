@@ -82,7 +82,7 @@ namespace bireyselKutuphane
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1813, 774);
+            this.pictureBox1.Size = new System.Drawing.Size(1672, 774);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -94,7 +94,7 @@ namespace bireyselKutuphane
             this.listeleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.listeleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listeleBtn.ForeColor = System.Drawing.Color.Black;
-            this.listeleBtn.Location = new System.Drawing.Point(1626, 119);
+            this.listeleBtn.Location = new System.Drawing.Point(1477, 119);
             this.listeleBtn.Name = "listeleBtn";
             this.listeleBtn.Size = new System.Drawing.Size(127, 52);
             this.listeleBtn.TabIndex = 36;
@@ -133,6 +133,7 @@ namespace bireyselKutuphane
             this.idAraTxt.Name = "idAraTxt";
             this.idAraTxt.Size = new System.Drawing.Size(157, 27);
             this.idAraTxt.TabIndex = 34;
+            this.idAraTxt.TextChanged += new System.EventHandler(this.idAraTxt_TextChanged);
             // 
             // groupBox2
             // 
@@ -518,9 +519,10 @@ namespace bireyselKutuphane
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(966, 427);
+            this.dataGridView1.Size = new System.Drawing.Size(817, 427);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
@@ -529,7 +531,7 @@ namespace bireyselKutuphane
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1626, 670);
+            this.button2.Location = new System.Drawing.Point(0, 83);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 52);
             this.button2.TabIndex = 37;
@@ -540,7 +542,7 @@ namespace bireyselKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1813, 774);
+            this.ClientSize = new System.Drawing.Size(1672, 774);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listeleBtn);
             this.Controls.Add(this.araBtn);

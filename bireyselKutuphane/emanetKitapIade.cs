@@ -43,7 +43,7 @@ namespace bireyselKutuphane
         {
             dataSet.Tables["emanet"].Clear();
             baglanti.Open();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("select*from emanet where id like'½"+idTxt.Text+"½'",baglanti);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("select*from emanet where id like'%" + idTxt.Text+"%'",baglanti);
             adapter.Fill(dataSet, "emanet");
             baglanti.Close();
             if (idTxt.Text=="")
@@ -58,7 +58,7 @@ namespace bireyselKutuphane
         {
             dataSet.Tables["emanet"].Clear();
             baglanti.Open();
-            MySqlDataAdapter adapter = new MySqlDataAdapter("select*from emanet where kitap_id like'½" + kitapIdTxt.Text + "½'", baglanti);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("select*from emanet where kitap_id like'%" + kitapIdTxt.Text + "%'", baglanti);
             adapter.Fill(dataSet, "emanet");
             baglanti.Close();
             if (kitapIdTxt.Text == "")

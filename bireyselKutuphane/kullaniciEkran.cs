@@ -20,8 +20,42 @@ namespace bireyselKutuphane
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            personelEkran personel = new personelEkran();
-            personel.Show();
+            Form1 form1 = new Form1();
+           form1.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void sıralamaBtn_Click(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gfrafikBtn_Click(object sender, EventArgs e)
+        {
+            grafik grafik = new grafik();
+            grafik.Show();
+            this.Hide();
+        }
+
+        private void emanetKitpBtn_Click(object sender, EventArgs e)
+        {
+            emanetKitaplarımcs emanetKitaplarımcs = new emanetKitaplarımcs();
+            emanetKitaplarımcs.Show();
+            this.Hide();
         }
     }
 }

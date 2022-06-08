@@ -43,28 +43,30 @@ namespace bireyselKutuphane
             dataGridView1.DataSource = dataSet.Tables["sepet"];
             baglanti.Close();
         }
+       
 
         private void ekleBtn_Click(object sender, EventArgs e)
-        {
-            baglanti.Open();
-            MySqlCommand komut = new MySqlCommand($"insert into sepet (adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili,alis_tarihi,veris_tarihi) values('{adetTxt.Text}','{isbnTxt.Text}','{baskıTxt.Text}','{kitapIdTxt.Text}','{yazarIdTxt.Text}','{kitapAdTxt.Text}','{yayınYiliTxt.Text}','{yayıneviIdTxt.Text}','{cevirmenIdTxt.Text}','{sayfaSayTxt.Text}','{rafKonumTxt.Text}','{cevirmeYiliTxt.Text}','{dateTimePicker1.Text}','{dateTimePicker2.Text}')", baglanti);
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            MessageBox.Show("Kitap(lar) sepete eklendi.");
-            dataSet.Tables["sepet"].Clear();
-            sepetListele();
-            sayi4.Text = "";
-            kitapSayisi();
-            foreach(Control item in groupBox2.Controls)
-            {
-                if(item is TextBox)
+        { baglanti.Open();
+            
+                MySqlCommand komut = new MySqlCommand($"insert into sepet (adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili,alis_tarihi,veris_tarihi) values('{adetTxt.Text}','{isbnTxt.Text}','{baskıTxt.Text}','{kitapIdTxt.Text}','{yazarIdTxt.Text}','{kitapAdTxt.Text}','{yayınYiliTxt.Text}','{yayıneviIdTxt.Text}','{cevirmenIdTxt.Text}','{sayfaSayTxt.Text}','{rafKonumTxt.Text}','{cevirmeYiliTxt.Text}','{dateTimePicker1.Text}','{dateTimePicker2.Text}')", baglanti);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Kitap(lar) sepete eklendi.");
+                dataSet.Tables["sepet"].Clear();
+                sepetListele();
+                sayi4.Text = "";
+                kitapSayisi();
+                foreach (Control item in groupBox2.Controls)
                 {
-                    if (item != adetTxt)
+                    if (item is TextBox)
                     {
-                        item.Text = "";
+                        if (item != adetTxt)
+                        {
+                            item.Text = "";
+                        }
                     }
                 }
-            }
+          
         }
         private void kitapSayisi()
         {
@@ -123,7 +125,7 @@ namespace bireyselKutuphane
             baglanti.Close();
             baglanti.Open();
             MySqlCommand mySqlCommand = new MySqlCommand("select sum(adet) from emanet where id='"+idTxt.Text+"'",baglanti);
-            sayi4.Text = mySqlCommand.ExecuteScalar().ToString();
+            sayi3.Text = mySqlCommand.ExecuteScalar().ToString();
             baglanti.Close();
             if (idTxt.Text == "")
             {
@@ -201,10 +203,10 @@ namespace bireyselKutuphane
                 if (sayi3.Text==""&&int.Parse(sayi4.Text)<=3||sayi3.Text!=""&&int.Parse(sayi3.Text)+int.Parse(sayi4.Text)<=3)
                 {
                     if (idTxt.Text!=""&&adTxt.Text!=""&&soyadTxt.Text!=""&&mailTxt.Text!=""&&telTxt.Text!="")
-                    {for(int i = 0; i < dataGridView1.Rows.Count -1; i++)
+                    {  for(int i = 0; i < dataGridView1.Rows.Count -1; i++)
                         {
                             baglanti.Open();
-                            MySqlCommand komut = new MySqlCommand("insert into emanet(alis_tarihi,veris_tarihi,id,adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili)values(@alis_tarihi,@veris_tarihi,@id,@adet,@isbn,@baski,@kitap_id,@yazar_id,@kitap_adi,@yayin_yili,@yayinevi_id,@cevirmen_id,@sayfa_sayisi,@raf_konumu,@cevirme_yili)", baglanti);
+                            MySqlCommand komut = new MySqlCommand("insert into emanet(alis_tarihi,veris_tarihi,id,ad,soyad,mail,telefon,adet,isbn,baski,kitap_id,yazar_id,kitap_adi,yayin_yili,yayinevi_id,cevirmen_id,sayfa_sayisi,raf_konumu,cevirme_yili)values(@alis_tarihi,@veris_tarihi,@id,@ad,@soyad,@mail,@telefon,@adet,@isbn,@baski,@kitap_id,@yazar_id,@kitap_adi,@yayin_yili,@yayinevi_id,@cevirmen_id,@sayfa_sayisi,@raf_konumu,@cevirme_yili)", baglanti);
                             komut.Parameters.AddWithValue("alis_tarihi", dataGridView1.Rows[i].Cells["alis_tarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("veris_tarihi", dataGridView1.Rows[i].Cells["veris_tarihi"].Value.ToString());
                             komut.Parameters.AddWithValue("@id", idTxt.Text);

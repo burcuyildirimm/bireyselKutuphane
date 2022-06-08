@@ -51,13 +51,18 @@ namespace bireyselKutuphane
 
         private void silBtn_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            MySqlCommand komut = new MySqlCommand("delete from kitap where kitap_id=@kitap_id", baglanti);
-            komut.Parameters.AddWithValue("@kitap_id", kitapIdTxt.Text);
-            komut.ExecuteNonQuery();
-            verileriGoster("select*from kitap");
-            baglanti.Close();
-            kitapIdTxt.Clear();
+            DialogResult dialog;
+            dialog = MessageBox.Show("Bu kaydı silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialog == DialogResult.Yes)
+            {
+                baglanti.Open();
+                MySqlCommand komut = new MySqlCommand("delete from kitap where kitap_id=@kitap_id", baglanti);
+                komut.Parameters.AddWithValue("@kitap_id", kitapIdTxt.Text);
+                komut.ExecuteNonQuery();
+                verileriGoster("select*from kitap");
+                baglanti.Close();
+                kitapIdTxt.Clear();
+            }
         }
 
         private void araBtn_Click(object sender, EventArgs e)
@@ -139,6 +144,16 @@ namespace bireyselKutuphane
                     }
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void idAraTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

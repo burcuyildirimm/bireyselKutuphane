@@ -40,13 +40,13 @@ namespace bireyselKutuphane
             this.parola2Txt = new System.Windows.Forms.TextBox();
             this.guncelleBtn = new System.Windows.Forms.Button();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.bolumIdTxt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.mailTxt = new System.Windows.Forms.TextBox();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.adresTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -79,10 +79,11 @@ namespace bireyselKutuphane
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1868, 773);
+            this.pictureBox1.Size = new System.Drawing.Size(1924, 773);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dataGridView1
             // 
@@ -95,6 +96,7 @@ namespace bireyselKutuphane
             this.dataGridView1.Size = new System.Drawing.Size(966, 427);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // groupBox2
@@ -212,6 +214,24 @@ namespace bireyselKutuphane
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(9, 372);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 20);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Bölüm Id:";
+            // 
+            // bolumIdTxt
+            // 
+            this.bolumIdTxt.Location = new System.Drawing.Point(104, 372);
+            this.bolumIdTxt.Name = "bolumIdTxt";
+            this.bolumIdTxt.Size = new System.Drawing.Size(157, 22);
+            this.bolumIdTxt.TabIndex = 19;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -237,38 +257,6 @@ namespace bireyselKutuphane
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.radioButton6.Location = new System.Drawing.Point(381, 173);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(89, 24);
-            this.radioButton6.TabIndex = 20;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Öğrenci";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(9, 372);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 20);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Bölüm Id:";
-            // 
-            // bolumIdTxt
-            // 
-            this.bolumIdTxt.Location = new System.Drawing.Point(104, 372);
-            this.bolumIdTxt.Name = "bolumIdTxt";
-            this.bolumIdTxt.Size = new System.Drawing.Size(157, 22);
-            this.bolumIdTxt.TabIndex = 19;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -286,6 +274,20 @@ namespace bireyselKutuphane
             this.mailTxt.Name = "mailTxt";
             this.mailTxt.Size = new System.Drawing.Size(157, 22);
             this.mailTxt.TabIndex = 17;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.radioButton6.Location = new System.Drawing.Point(381, 173);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(89, 24);
+            this.radioButton6.TabIndex = 20;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Öğrenci";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // label9
             // 
@@ -516,9 +518,10 @@ namespace bireyselKutuphane
             // 
             // kullaniciListele
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1868, 773);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.ClientSize = new System.Drawing.Size(1924, 773);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listeleBtn);
             this.Controls.Add(this.label2);
@@ -535,6 +538,7 @@ namespace bireyselKutuphane
             this.Name = "kullaniciListele";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kullaniciListele";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.kullaniciListele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
